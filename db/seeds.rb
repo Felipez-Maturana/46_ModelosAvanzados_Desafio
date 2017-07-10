@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Animal.delete_all
+AnimalType.delete_all
+
+chango = AnimalType.create!(nombre: 'Chango')
+perro = AnimalType.create!(nombre: 'Perro')
+gato = AnimalType.create!(nombre: 'Gato')
+
+chango.animal.build(nombre: 'Pancho').save
+chango.animal.build(nombre: 'Pipe').save
+chango.animal.build(nombre: 'Lucy').save
+
+gato.animal.build(nombre: 'Misifu').save
+gato.animal.build(nombre: 'Con Botas').save
+gato.animal.build(nombre: 'Garfield').save
+
+perro.animal.build(nombre: 'Beethoven').save
+perro.animal.build(nombre: 'Baldo').save
+perro.animal.build(nombre: 'Clifford').save
